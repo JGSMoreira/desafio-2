@@ -1,38 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap');
+
 .App {
   text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  color: #181818
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.barraAvisos{
+  background-color: #181818;
+  color: #FFFFFF;
+  padding: 3px;
+  font-weight: 300;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.barraTitulo{
+  
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.barraTitulo h2{
+  font-weight: 600;
+  line-height: 15px;
+}
+.bannerPrincipal{
+  color: #FFFFFF;
+  text-align: left;
+  overflow-y: hidden;
+  max-height: 375px;
+  
+}
+.bannerPrincipal img{
+  width: 100%;
+  filter: brightness(.45) contrast(.95);
+  transform: translate(0, -20%);
+}
+.bannerPrincipal .texto{
+  position: absolute;
+  z-index: 10;
+  padding-left: 100px;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  max-height: 375px;
+  max-width: 450px;
+  line-height: 2em;
+  letter-spacing: 0.03em;
 }
 
-.App-link {
-  color: #61dafb;
+#corpo{
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+#corpo h1{
+  font-weight: 600;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.tenis{
+  display: grid;
+  grid-column: auto;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: 30px;
+  row-gap: 30px;
+  padding: 30px 120px;
+  justify-items: center;
+}
+.blocoTenis{
+  display: flex;
+  align-items: center;
+  background-color: #EBE9EA;
+
+  width: fit-content;
+  height: 300px;
+}
+.blocoTenis img{
+  width: 300px;
+}
+
+#footer{
+  color: #FFFFFF;
+  background-color: #181818;
+  padding: 3px;
+  font-weight: 500;
+}
+
+@media (max-width: 1500px) {
+  .tenis{
+    grid-template-columns: 1fr 1fr 1fr;
   }
-  to {
-    transform: rotate(360deg);
+}
+@media (max-width: 1280px) {
+  .tenis{
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 850px) {
+  .tenis{
+    grid-template-columns: 1fr;
   }
 }
